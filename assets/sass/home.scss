@@ -1,0 +1,104 @@
+#home{
+
+    #header{
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        // Project name 
+        #title{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img{
+                margin-left: 10px;
+            }
+        }
+
+        // create a new habit
+        #new_habit{
+            width: 25%;
+            
+            form{
+                input[type="text"]{
+                    width: 75%;
+                    height: 30px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    border: none;
+                }
+
+                input[type="text"]:focus {
+                    outline: none !important;
+                }
+
+                button{
+                    width: 75px;
+                    height: 30px;
+                    margin-left: 10px;
+                    border-radius: 5%;
+                    border: none;
+                    background-color: rgb(145, 171, 75);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    // Identifier
+    #list_name{
+        border-top: 1px solid red;
+        border-bottom: 1px solid red;
+        text-align: center;
+    }
+
+    // List of all habits
+    .render_habits{
+        width: 100%;
+        .habit_list{
+            width: 40%;
+            height: 500px;
+            margin: 10px auto 10px;
+            list-style: none;
+            padding: 10px;
+            overflow: scroll;
+            overflow-x: hidden;
+            border: 1px solid purple;
+            border-radius: 5px;
+
+            // habit item
+            .habit_item {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+                margin-top: 10px;
+                
+                background-color: bisque;
+                border: 1px solid black;
+                border-radius: 5px;
+                transition: background 1s;
+
+                cursor: pointer;
+
+                .habit_item_name {
+                    font-size: 25px;
+                }
+
+                .habit_delete {
+                    font-size: 25px;
+                    a{color: red;}
+                }
+            }
+
+            // when hover over perticular habit change bg with transition
+            .habit_item:hover{
+                background: #7DC2AD;
+            }
+
+        }
+    }
+}
